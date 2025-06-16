@@ -3,38 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Catalogo completo</title>
-
-  <script>
-    const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (!isMobile) {
-      window.location.href = "https://www.google.com";
-    }
-  </script>
-
-  <script>
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
-        e.preventDefault();
-      }
-    });
-    document.addEventListener('contextmenu', e => e.preventDefault());
-  </script>
+  <title>Foto e Incontri</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <meta property="og:image" content="https://i.postimg.cc/rwXk6KNf/photo-5080140305176571628-x.jpg">
+  <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
   <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
 
   <style>
+    /* estilos sin cambios */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
@@ -43,7 +26,6 @@
       overflow-x: hidden;
       position: relative;
     }
-
     .wrap {
       position: relative;
       z-index: 1;
@@ -55,25 +37,21 @@
       padding: 20px;
       text-align: center;
     }
-
     .logo {
       position: absolute;
       top: 15%;
       z-index: 2;
     }
-
     .logo img {
       max-width: 250px;
       margin-bottom: 35px;
       filter: drop-shadow(0 0 10px #fff);
     }
-
     .question-title {
       font-size: 1.8rem;
       margin: 30px 0;
       text-shadow: 1px 1px 3px #000;
     }
-
     .buttons-block {
       display: flex;
       flex-direction: column;
@@ -82,7 +60,6 @@
       max-width: 380px;
       z-index: 2;
     }
-
     .step-btn {
       padding: 20px 28px;
       background: linear-gradient(45deg, #1E90FF, #4682B4);
@@ -98,21 +75,17 @@
       align-items: center;
       justify-content: center;
     }
-
     .step-btn:hover {
       transform: scale(1.07);
       box-shadow: 0 8px 24px rgba(30, 144, 255, 0.7);
     }
-
     .step-btn span {
       margin-left: 10px;
     }
-
     a.step-btn {
       text-decoration: none;
       display: block;
     }
-
     .image-container {
       position: relative;
       width: 100%;
@@ -120,7 +93,6 @@
       max-width: 100%;
       overflow: hidden;
     }
-
     .image-container img {
       position: absolute;
       top: 0;
@@ -131,21 +103,17 @@
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-
     .image-container img.active {
       opacity: 1;
     }
-
     @media (max-width: 480px) {
       .question-title {
         font-size: 1.4rem;
       }
-
       .step-btn {
         font-size: 1.05rem;
         padding: 18px 24px;
       }
-
       .buttons-block {
         max-width: 100%;
       }
@@ -159,11 +127,11 @@
     </div>
 
     <div class="image-container">
-      <img src="https://i.postimg.cc/HW8YfDCs/82179024-014-69f7.jpg" class="active">
-      <img src="https://i.postimg.cc/CxXJrqCK/82179024-015-4479.jpg">
-      <img src="https://i.postimg.cc/sxbvCsT5/82179024-016-4479.jpg">
-      <img src="https://i.postimg.cc/zDyC6BBb/82179024-025-f904.jpg">
-      <img src="https://i.postimg.cc/jjR6F4wt/82179024-017-ff6f.jpg">
+      <img src="https://i.postimg.cc/CdTWjD1r/81020308-007-1929.jpg" class="active">
+      <img src="https://i.postimg.cc/5tK987MP/81020308-016-d7a5.jpg">
+      <img src="https://i.postimg.cc/RFjMDWhK/81020308-011-362d.jpg">
+      <img src="https://i.postimg.cc/DfXfbPpg/81020308-013-0ac4.jpg">
+      <img src="https://i.postimg.cc/1509v5QV/81020308-012-0ac4.jpg">
     </div>
 
     <div class="step-block">
