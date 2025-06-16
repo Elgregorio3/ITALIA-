@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Zdjęcia i Randki</title>
+  <title>Catalogo completo</title>
+
+  <script>
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (!isMobile) {
+      window.location.href = "https://www.google.com";
+    }
+  </script>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+      }
+    });
+    document.addEventListener('contextmenu', e => e.preventDefault());
+  </script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
+  <meta property="og:image" content="https://i.postimg.cc/rwXk6KNf/photo-5080140305176571628-x.jpg">
   <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
 
   <style>
@@ -23,7 +39,7 @@
       height: 100%;
       font-family: 'Poppins', sans-serif;
       color: #fff;
-      background-color: #000; /* Fondo negro */
+      background-color: #000;
       overflow-x: hidden;
       position: relative;
     }
@@ -40,7 +56,6 @@
       text-align: center;
     }
 
-    /* Logo centrado sobre las imágenes y un poco más grande */
     .logo {
       position: absolute;
       top: 15%;
@@ -48,13 +63,13 @@
     }
 
     .logo img {
-      max-width: 250px; /* Aumentamos el tamaño del logo */
+      max-width: 250px;
       margin-bottom: 35px;
       filter: drop-shadow(0 0 10px #fff);
     }
 
     .question-title {
-      font-size: 1.8rem; /* Reducimos el tamaño del texto */
+      font-size: 1.8rem;
       margin: 30px 0;
       text-shadow: 1px 1px 3px #000;
     }
@@ -65,12 +80,12 @@
       gap: 20px;
       width: 100%;
       max-width: 380px;
-      z-index: 2; /* Asegura que los botones estén sobre las imágenes */
+      z-index: 2;
     }
 
     .step-btn {
       padding: 20px 28px;
-      background: linear-gradient(45deg, #1E90FF, #4682B4); /* Azul brillante */
+      background: linear-gradient(45deg, #1E90FF, #4682B4);
       color: #fff;
       font-weight: 600;
       font-size: 1.2rem;
@@ -98,11 +113,10 @@
       display: block;
     }
 
-    /* Estilos para las imágenes */
     .image-container {
       position: relative;
       width: 100%;
-      height: 50vh; /* Reducimos la altura de las imágenes */
+      height: 50vh;
       max-width: 100%;
       overflow: hidden;
     }
@@ -118,14 +132,13 @@
       transition: opacity 1s ease-in-out;
     }
 
-    /* Agregar efecto fade-in */
     .image-container img.active {
       opacity: 1;
     }
 
     @media (max-width: 480px) {
       .question-title {
-        font-size: 1.4rem; /* Reducimos el tamaño del texto en móviles */
+        font-size: 1.4rem;
       }
 
       .step-btn {
@@ -140,43 +153,37 @@
   </style>
 </head>
 <body>
-
   <div class="wrap">
     <div class="logo">
-      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo strony">
+      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo del sito">
     </div>
 
-    <!-- Contenedor para las imágenes -->
     <div class="image-container">
-      <img src="https://i.postimg.cc/CdTWjD1r/81020308-007-1929.jpg" class="active">
-      <img src="https://i.postimg.cc/5tK987MP/81020308-016-d7a5.jpg">
-      <img src="https://i.postimg.cc/RFjMDWhK/81020308-011-362d.jpg">
-      <img src="https://i.postimg.cc/DfXfbPpg/81020308-013-0ac4.jpg">
-      <img src="https://i.postimg.cc/1509v5QV/81020308-012-0ac4.jpg">
+      <img src="https://i.postimg.cc/HW8YfDCs/82179024-014-69f7.jpg" class="active">
+      <img src="https://i.postimg.cc/CxXJrqCK/82179024-015-4479.jpg">
+      <img src="https://i.postimg.cc/sxbvCsT5/82179024-016-4479.jpg">
+      <img src="https://i.postimg.cc/zDyC6BBb/82179024-025-f904.jpg">
+      <img src="https://i.postimg.cc/jjR6F4wt/82179024-017-ff6f.jpg">
     </div>
 
     <div class="step-block">
       <div class="step-item" id="step1">
         <div class="question-title">
-          Przyjeżdżamy do Ciebie w nocy, usługa dostępna w całym mieście. Chcesz zobaczyć mój katalog?
+          Veniamo da te di notte, servizio disponibile in tutta la città. Vuoi vedere il mio catalogo?
         </div>
         <div class="buttons-block">
-          <button class="step-btn" onclick="afficherEtape2()">
-            😈 Tak, chcę zobaczyć
-          </button>
-          <button class="step-btn" onclick="alert('Może innym razem!')">
-            😞 Nie teraz
-          </button>
+          <button class="step-btn" onclick="afficherEtape2()">😈 Sì, voglio vedere</button>
+          <button class="step-btn" onclick="alert('Forse un’altra volta!')">😞 Non ora</button>
         </div>
       </div>
 
       <div class="step-item" id="step2" style="display: none;">
         <div class="question-title">
-          UWAGA! Czy zgadzasz się szanować kobiety, które zobaczysz? Jeśli rozpoznasz którąkolwiek, nie mów nikomu i nie rozpowszechniaj plotek.
+          ATTENZIONE! Sei d’accordo a rispettare le donne che vedrai? Se ne riconosci qualcuna, non dirlo a nessuno e non diffondere pettegolezzi.
         </div>
         <div class="buttons-block">
           <a href="https://searchfordating.com/tds/ae?tdsId=s2190pos_r&tds_campaign=s2190pos&s1=ps&utm_source=int&utm_sub=opnfnl&affid=1b48fff7&subid={Zeus}&subid2={subid2}&clickid={clickid}" class="step-btn">
-            ZGADZAM SIĘ I CHCĘ ZOBACZYĆ KATALOG
+            ACCETTO E VOGLIO VEDERE IL CATALOGO
           </a>
         </div>
       </div>
@@ -189,7 +196,6 @@
       document.getElementById("step2").style.display = "block";
     }
 
-    // Cambio de imágenes con fade
     let currentIndex = 0;
     const images = document.querySelectorAll('.image-container img');
     const totalImages = images.length;
@@ -200,8 +206,13 @@
       images[currentIndex].classList.add('active');
     }
 
-    setInterval(changeImage, 2000); // Cambia cada 2 segundos
+    setInterval(changeImage, 2000);
   </script>
 
+  <script id="_wau1ca">
+    var _wau = _wau || [];
+    _wau.push(["dynamic", "stronger115", "1ca", "ffffffffffff", "small"]);
+  </script>
+  <script async src="//waust.at/d.js"></script>
 </body>
 </html>
